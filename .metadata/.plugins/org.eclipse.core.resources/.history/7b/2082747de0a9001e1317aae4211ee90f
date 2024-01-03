@@ -1,0 +1,5 @@
+package springChap3googleAPI.repository;
+
+public class MemberRepository {
+
+}

@@ -1,0 +1,5 @@
+package springChap3googleAPI.model;
+
+public class MemberGoogle {
+
+}

@@ -1,0 +1,5 @@
+package com.kh.springchap2.service;
+
+public class ProductService {
+
+}

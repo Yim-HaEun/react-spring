@@ -1,0 +1,5 @@
+package springChap3googleAPI.config;
+
+public class SecurityConfig {
+
+}

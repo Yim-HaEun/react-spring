@@ -1,0 +1,5 @@
+package com.kh.springchap2.model;
+
+public class Product {
+
+}
