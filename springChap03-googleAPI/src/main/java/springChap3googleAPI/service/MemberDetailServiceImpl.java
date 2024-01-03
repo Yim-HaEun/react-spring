@@ -17,8 +17,8 @@ public class MemberDetailServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        MemberGoogle user = memberGoogleRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("일치하는 유저 정보를 찾을 수 없습니다." + username));
+        MemberGoogle user = memberGoogleRepository.findByUsername(username);
+                //.orElseThrow(() -> new UsernameNotFoundException("일치하는 유저 정보를 찾을 수 없습니다." + username));
 
         return new org.springframework.security.core.userdetails.User(
                 user.getName(),
