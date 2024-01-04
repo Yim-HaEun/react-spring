@@ -8,8 +8,8 @@ import lombok.*;
 @Entity
 public class UserGoogle {
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="mg_seq")
-	@SequenceGenerator(name="mg_seq",sequenceName="mg_seq",allocationSize =1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="ug_seq")
+	@SequenceGenerator(name="ug_seq",sequenceName="ug_seq",allocationSize =1)
 	private Long id; //기본키
 	private String email;
 	private String username;
