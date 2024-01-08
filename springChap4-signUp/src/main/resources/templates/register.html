@@ -33,7 +33,7 @@
 		
 		<div class="form-group">
 		<label for = "email">이메일 : </label>
-		<input type="text" id="email" th:field="*{email}" th:value="${#oauth2.isMemberSignedIn() ? #authentication.principal.attributes['email']: null}" required/>
+		<input type="text" id="email" th:field="*{email}"required/>
 		</div>
 		<button type="submit" class="btn btn-primary">가입하기</button>
 	</form>
@@ -43,3 +43,4 @@
 </body>
 </html>
 <!--불러올때는 $, 작성해줄때는 *-->
+<!-- th:value="${#oauth2.isMemberSignedIn() ? #authentication.principal.attributes['email']: null}" required앞에-->

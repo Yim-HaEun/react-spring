@@ -36,10 +36,10 @@ public class SecurityConfig {
 		return a.getAuthenticationManager();
 	}
 	
-	/*@Bean
+	@Bean
 	static PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder(); // BCryptPasswordEncoder() 형식으로 저장
+		return new BCryptPasswordEncoder(); // 기본형식인 Security는 기본적으로 DelegatingPasswordEncoder를 BCryptPasswordEncoder() 형식으로 저장
 	}
-	*/
+	
 
 }
