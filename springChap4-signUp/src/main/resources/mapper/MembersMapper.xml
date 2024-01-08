@@ -1,0 +1,10 @@
+<!-- MembersMapper (myBatis) -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kh.mapper.MembersMapper">
+	<!-- 회원등록 -->
+	<insert id ="insertMember" parameterType="com.kh.model.Member">
+		INSERT INTO Members (MemberID, Username, Password,FullName,Email,RegistrationDate)
+		VALUES(members_seq.NEXTVAL,#{username},#{password},#{fullName},#{email}, sysdate)
+	</insert>
+</mapper>
