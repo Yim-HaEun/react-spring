@@ -8,6 +8,8 @@ import com.kh.model.Member;
 public interface MembersMapper {
 	void insertMember(Member member);
 
-	void loginMember(Member member);
+	Member loginMember(String username);
+	
+	
 
 }

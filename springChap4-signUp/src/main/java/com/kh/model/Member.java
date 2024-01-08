@@ -13,5 +13,9 @@ public class Member {
 	private String fullName;
 	private String email;
 	private Date registrationDate;
+	
+	
+	
+	
 
 }

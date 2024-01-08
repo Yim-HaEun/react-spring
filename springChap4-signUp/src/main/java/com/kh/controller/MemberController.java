@@ -27,16 +27,7 @@ public class MemberController {
 		memberService.signUpMember(member);
 		return "redirect:/";
 	}
-	@GetMapping("/login")
-	public String showLoginForm() {
-		
-		return "/login";
-	}
-	@PostMapping("login")
-	public String Login(Member member) {
-		memberService.login(member);
-		return "redirect/home";
-	}
+	
 	
 
 

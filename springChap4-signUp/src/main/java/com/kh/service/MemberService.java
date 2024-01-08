@@ -17,7 +17,7 @@ public class MemberService {
 		
 	}
 	//로그인하기
-	public void login(Member member) {
-		membersMapper.loginMember(member);
+	public void login(String username) {
+		membersMapper.loginMember(username);
 	}
 }
