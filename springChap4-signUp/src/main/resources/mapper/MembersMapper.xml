@@ -4,8 +4,8 @@
 <mapper namespace="com.kh.mapper.MembersMapper">
 	<!-- 회원등록 -->
 	<insert id ="insertMember" parameterType="com.kh.model.Member">
-		INSERT INTO Members (MemberID, Username, Password,FullName,Email,RegistrationDate)
-		VALUES(members_seq.NEXTVAL,#{username},#{password},#{fullName},#{email}, sysdate)
+		INSERT INTO Members (MemberID, Username, Password,FullName,Email,RegistrationDate, Role)
+		VALUES(members_seq.NEXTVAL, #{username},#{password},#{fullName}, #{email}, sysdate, #{role})
 	</insert>
 	
 	<select id ="loginMember" parameterType="com.kh.model.Member">

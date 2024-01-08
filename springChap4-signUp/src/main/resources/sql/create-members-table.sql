@@ -4,7 +4,8 @@ CREATE TABLE Members (
     Password VARCHAR2(100) NOT NULL,
     FullName VARCHAR2(50) NOT NULL,
     Email VARCHAR2(100) UNIQUE NOT NULL,
-    RegistrationDate DATE DEFAULT SYSDATE
+    RegistrationDate DATE DEFAULT SYSDATE,
+    Role VARCHAR2(50) NOT NULL
 );
 CREATE SEQUENCE members_seq
        INCREMENT BY 1

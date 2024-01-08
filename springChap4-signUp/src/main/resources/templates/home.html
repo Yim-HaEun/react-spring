@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlnx:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta charset="EUC-KR">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,6 +12,11 @@
 </head>
 <body>
 	<h2>환영합니다.</h2>
+	
 	<a href="/members/logout">LogOut</a>
+	<br>
+		<div sec:if>
+		<a sec:authorize="hasRole('ROLE_ADMIN')" >userㅠㅠㅠㅠㅠ</a>
+		</div>
 </body>
 </html>

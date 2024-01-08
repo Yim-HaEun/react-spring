@@ -24,7 +24,7 @@ public class MemberController {
 	
 	@PostMapping("/register")
 	public String registerMember(Member member) {
-		memberService.signUpMember(member.getUsername(), member.getPassword(), member.getFullName(), member.getEmail());
+		memberService.signUpMember(member.getUsername(), member.getPassword(), member.getFullName(), member.getEmail(), member.getRole());
 		return "redirect:/";
 	}
 	

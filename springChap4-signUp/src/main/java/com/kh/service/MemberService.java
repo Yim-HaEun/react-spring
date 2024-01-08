@@ -14,7 +14,7 @@ public class MemberService {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	//회원 정보 저장하기
-	public Member signUpMember(String username, String password, String fullName, String email) {
+	public Member signUpMember(String username, String password, String fullName, String email, String role) {
 		
 		Member member = new Member();
 		
@@ -22,6 +22,7 @@ public class MemberService {
 		member.setPassword(passwordEncoder.encode(password));
 		member.setFullName(fullName);
 		member.setEmail(email);
+		member.setRole(role);
 		membersMapper.insertMember(member);
 		return member;
 		

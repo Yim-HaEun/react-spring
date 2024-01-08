@@ -51,10 +51,12 @@ public class UserSecurityService implements UserDetailsService{
 		List<GrantedAuthority> authorities = new ArrayList<>();
 		System.out.println("성공 : " + _siteUser.getUsername());
 		// 만약에 admin user로 로그인이 된다면 로그인 분류를 role에 따라 추가로 작성
-		if("admin_Haeun".equals(_siteUser.getUsername())) {
-			authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-		}else {
-			authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+		String userRole = _siteUser.getRole();
+
+		if ("admin".equals(_siteUser.getUsername()) && "ROLE_ADMIN".equals(userRole)) {
+		    authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+		} else {
+		    authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
 		}
 		return new User	(_siteUser.getUsername(), _siteUser.getPassword(), authorities);
 	}
