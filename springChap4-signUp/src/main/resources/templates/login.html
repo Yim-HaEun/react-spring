@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko" xmlns="http://www.thymeleaf.org">
 <head>
 <meta charset="EUC-KR">
 
@@ -15,7 +15,11 @@
 	<input type="text" id="password" name="password" />
 	<button type="submit">로그인</button>
 	</form>
+	<div><a th:href="@{|${kakaoUrl}|}">카카오 로그인</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a th:href="@{|${naverUrl}|}">네이버 로그인</a></div>
 	
+
 
 </body>
 </html>
