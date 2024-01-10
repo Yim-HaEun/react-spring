@@ -53,7 +53,7 @@ public class UserSecurityService implements UserDetailsService{
 		// 만약에 admin user로 로그인이 된다면 로그인 분류를 role에 따라 추가로 작성
 		String userRole = _siteUser.getRole();
 
-		if ("admin".equals(_siteUser.getUsername()) && "ROLE_ADMIN".equals(userRole)) {
+		if ("ROLE_ADMIN".equals(_siteUser.getRole())) {
 		    authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
 		} else {
 		    authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
