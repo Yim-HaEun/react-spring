@@ -12,6 +12,7 @@ import com.kh.kakao.service.kakaoService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/kakao")
